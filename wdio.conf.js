@@ -25,6 +25,10 @@ exports.config = {
     specs: [
         './features/**/*.feature'
     ],
+    suites: {
+        login: ['./features/login.feature'],
+        register: ['./features/register.feature']
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'

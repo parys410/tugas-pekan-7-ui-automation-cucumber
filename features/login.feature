@@ -1,4 +1,4 @@
-Feature: The Internet Guinea Pig Website
+Feature: The Para Bank Website
 
   Scenario Outline: As a user, I can log into the secure area
 
@@ -7,5 +7,5 @@ Feature: The Internet Guinea Pig Website
     Then I should see my name <fullname>
 
     Examples:
-      | username        | password              | fullname                         |
-      | riadharmayanti  | AkuAnakSehat2022      | Ria Dharmayanti                  |
+      | username        | password          | fullName        |
+      | riadharmayanti  | AkuAnakSehat2022  | Ria Dharmayanti |
