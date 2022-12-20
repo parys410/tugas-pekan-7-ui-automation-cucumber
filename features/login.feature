@@ -2,10 +2,10 @@ Feature: The Para Bank Website
 
   Scenario Outline: As a user, I can log into the secure area
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see my name <fullname>
+    Given In a login steps, I am on the login page
+    When In a login steps, I login with <username> and <password>
+    Then In a login steps, I should see my name <fullName>
 
     Examples:
-      | username        | password          | fullName        |
-      | riadharmayanti  | AkuAnakSehat2022  | Ria Dharmayanti |
+      | username          | password       | fullName        |
+      | riadharmayanti    | UserBiasa2022  | Ria Dharmayanti |

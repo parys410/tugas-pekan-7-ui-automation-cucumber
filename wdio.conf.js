@@ -27,7 +27,8 @@ exports.config = {
     ],
     suites: {
         login: ['./features/login.feature'],
-        register: ['./features/register.feature']
+        register: ['./features/register.feature'],
+        registerFailed: ['./features/registerFailed.feature'],
     },
     // Patterns to exclude.
     exclude: [
@@ -60,14 +61,17 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 10,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+        'goog:chromeOptions': {
+            "excludeSwitches": ["enable-logging"]
+        }
     }],
     //
     // ===================
@@ -76,7 +80,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    // logLevel: 'debug',
     //
     // Set specific log levels per logger
     // loggers:
@@ -103,7 +107,7 @@ exports.config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 100000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -145,7 +149,11 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.js'],
+        require: [
+            './features/step-definitions/loginSteps.js',
+            './features/step-definitions/registerSteps.js',
+            './features/step-definitions/registerFailedSteps.js',
+        ],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

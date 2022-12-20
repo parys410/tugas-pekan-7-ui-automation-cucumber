@@ -1,4 +1,13 @@
 {
+  "name": "tugas-pekan-7-ui-automation-cucumber",
+  "version": "1.0.0",
+  "description": "Tugas Pekan 7 - UI Automation Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "author": "ArySetiyawan (parys410@gmail.com)",
+  "license": "ISC",
   "devDependencies": {
     "@wdio/cli": "^8.0.9",
     "@wdio/cucumber-framework": "^8.0.9",
@@ -6,8 +15,5 @@
     "@wdio/spec-reporter": "^8.0.8",
     "chromedriver": "^108.0.0",
     "wdio-chromedriver-service": "^8.0.1"
-  },
-  "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
   }
 }

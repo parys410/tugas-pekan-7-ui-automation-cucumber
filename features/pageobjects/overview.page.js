@@ -9,7 +9,7 @@ class OverviewPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get fullName() {
+    get welcomeText() {
         return $('.smallText');
     }
 

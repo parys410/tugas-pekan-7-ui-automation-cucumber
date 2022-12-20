@@ -9,3 +9,6 @@ yarn install
 
 ## How to Run?
 - npm run wdio
+
+## How to Run a single scenario (suite)
+- npx wdio run ./wdio.conf.js --suite {suite name}

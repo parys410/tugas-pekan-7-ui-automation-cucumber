@@ -10,8 +10,8 @@ class RegisterPage extends Page {
     return $('.smallText');
   }
 
-  get url() {
-    return browser.getUrl();
+  get usernameError() {
+    return $('//*[@id="customer.username.errors"]');
   }
 
   get inputFirstName() {
