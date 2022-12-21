@@ -2,13 +2,14 @@
 const TestSteps = [
     './features/step-definitions/loginSuccessfullySteps.js',
     './features/step-definitions/loginFailedEmptySteps.js',
+    './features/step-definitions/loginFailedWrongPassSteps.js',
     './features/step-definitions/registerSteps.js',
     './features/step-definitions/registerFailedSteps.js',
 ];
 
 const TestSuites = {
     registrationTest: ['./features/register.feature', './features/registerFailed.feature'],
-    loginTest: ['./features/loginSuccessfully.feature', './features/loginFailedEmpty.feature'],
+    loginTest: ['./features/loginSuccessfully.feature', './features/loginFailedEmpty.feature', './features/loginFailedWrongPass.feature'],
 };
 
 exports.config = {
