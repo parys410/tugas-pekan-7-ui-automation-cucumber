@@ -4,8 +4,9 @@ Feature: The Para Bank Website
 
     Given In a login steps, I am on the login page
     When In a login steps, I login with <username> and <password>
+    And In a login steps, I am on the overview page
     Then In a login steps, I should see my name <fullName>
 
     Examples:
       | username          | password       | fullName        |
-      | riadharmayanti    | UserBiasa2022  | Ria Dharmayanti |
+      | bangkitaryawan    | UserBiasa2022  | Bangkit Aryawan |

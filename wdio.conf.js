@@ -1,3 +1,16 @@
+
+const TestSteps = [
+    './features/step-definitions/loginSuccessfullySteps.js',
+    './features/step-definitions/loginFailedEmptySteps.js',
+    './features/step-definitions/registerSteps.js',
+    './features/step-definitions/registerFailedSteps.js',
+];
+
+const TestSuites = {
+    registrationTest: ['./features/register.feature', './features/registerFailed.feature'],
+    loginTest: ['./features/loginSuccessfully.feature', './features/loginFailedEmpty.feature'],
+};
+
 exports.config = {
     //
     // ====================
@@ -25,12 +38,7 @@ exports.config = {
     specs: [
         './features/**/*.feature'
     ],
-    suites: {
-        fullRegression: ['./features/register.feature', './features/registerFailed.feature'],
-        login: ['./features/login.feature'],
-        register: ['./features/register.feature'],
-        registerFailed: ['./features/registerFailed.feature'],
-    },
+    suites: TestSuites,
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -150,11 +158,7 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: [
-            './features/step-definitions/loginSteps.js',
-            './features/step-definitions/registerSteps.js',
-            './features/step-definitions/registerFailedSteps.js',
-        ],
+        require: TestSteps,
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

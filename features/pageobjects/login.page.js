@@ -18,6 +18,14 @@ class LoginPage extends Page {
     return $('//*[@id="loginPanel"]/p[2]/a');
   }
 
+  get title() {
+    return $('.title');
+  }
+
+  get error() {
+    return $('.error');
+  }
+
   async login(username, password) {
     await this.inputUsername.setValue(username);
     await this.inputPassword.setValue(password);
