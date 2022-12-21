@@ -9,4 +9,4 @@ Feature: The Para Bank Website
 
     Examples:
       | username          | password       | fullName              | firstName     | lastName        | address                 | city      | state | zipcode | phone       | ssn       |
-      | riadharmayanti    | UserBiasa2022  | Ria Dharmayanti       | Ria           | Dharmayanti     | Jl. Raya Sesetan No. 17 | Denpasar  | Bali  | 80362   | 08177788899 | 19700653  |
+      | bangkitaryawan    | UserBiasa2022  | Bangkit Aryawan       | Bangkit       | Aryawan         | Jl. Raya Sesetan No. 17 | Denpasar  | Bali  | 80362   | 08177788899 | 19700654  |

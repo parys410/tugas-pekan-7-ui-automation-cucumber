@@ -26,6 +26,7 @@ exports.config = {
         './features/**/*.feature'
     ],
     suites: {
+        fullRegression: ['./features/register.feature', './features/registerFailed.feature'],
         login: ['./features/login.feature'],
         register: ['./features/register.feature'],
         registerFailed: ['./features/registerFailed.feature'],
