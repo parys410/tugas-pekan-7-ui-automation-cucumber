@@ -11,4 +11,5 @@ yarn install
 - npm run wdio
 
 ## How to Run a single scenario (suite)
-- npx wdio run ./wdio.conf.js --suite {suite name}
+- npx wdio run ./wdio.conf.js --suite registrationTest
+- npx wdio run ./wdio.conf.js --suite loginTest
