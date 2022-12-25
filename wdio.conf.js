@@ -9,6 +9,7 @@ const TestSteps = [
 const TestSuites = {
     registrationTest: ['./features/register.feature', './features/registerFailed.feature'],
     loginTest: ['./features/loginSuccessfully.feature', './features/loginFailedEmpty.feature', './features/loginFailedWrongPass.feature'],
+    allTest: ['./features/register.feature', './features/registerFailed.feature', './features/loginSuccessfully.feature', './features/loginFailedEmpty.feature', './features/loginFailedWrongPass.feature'],
 };
 
 exports.config = {

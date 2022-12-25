@@ -9,4 +9,4 @@ Feature: The Para Bank Website
 
     Examples:
       | username          | password          | fullName            |
-      | parys611          | PassValid2022     | Ary Setiyawan       |
+      | parys612          | PassValid2022     | Ary Setiyawan       |

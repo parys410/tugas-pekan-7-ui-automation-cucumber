@@ -9,4 +9,4 @@ Feature: The Para Bank Website
 
     Examples:
       | username          | password       | fullName              | firstName     | lastName        | address                 | city      | state | zipcode | phone       | ssn       |
-      | parys611          | PassValid2022  | Ary Setiyawan         | Ary           | Setiyawan       | Jl. Raya Sesetan No. 17 | Denpasar  | Bali  | 80362   | 08177788899 | 19700672  |
+      | parys612          | PassValid2022  | Ary Setiyawan         | Ary           | Setiyawan       | Jl. Raya Sesetan No. 17 | Denpasar  | Bali  | 80362   | 08177788899 | 19700673  |

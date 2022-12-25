@@ -8,7 +8,7 @@ yarn install
 ```
 
 ## How to Run?
-- npm run wdio
+- npx wdio run ./wdio.conf.js --suite allTest
 
 ## How to Run a single scenario (suite)
 - npx wdio run ./wdio.conf.js --suite registrationTest
