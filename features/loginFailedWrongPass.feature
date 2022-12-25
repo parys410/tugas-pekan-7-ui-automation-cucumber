@@ -7,5 +7,5 @@ Feature: The Para Bank Website
     Then In a login failed wrong pass steps, I should see error message
 
     Examples:
-      | username          | password       | fullName       |
-      | parys513          | PasswordSalah  | Ary Setiyawan |
+      | username          | password       | fullName      |
+      | parys611          | PasswordSalah  | Ary Setiyawan |
