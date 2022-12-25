@@ -12,5 +12,5 @@ When(/^In a login failed wrong pass steps, I login with (\w+) and (.+)$/, async 
 
 Then(/^In a login failed wrong pass steps, I should see error message$/, async () => {
   await expect(LoginPage.title).toHaveTextContaining("Error");
-  await expect(LoginPage.error).toHaveTextContaining("The username and password could not be verified");
+  await expect(LoginPage.error).toBeDisplayed();
 });

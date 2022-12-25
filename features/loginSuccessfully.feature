@@ -8,5 +8,5 @@ Feature: The Para Bank Website
     Then In a login steps, I should see my name <fullName>
 
     Examples:
-      | username          | password       | fullName        |
-      | arisetiyawan      | UserBiasa2022  | Ari Setiyawan   |
+      | username          | password          | fullName            |
+      | parys513          | PassValid2022     | Ary Setiyawan       |

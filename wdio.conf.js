@@ -1,4 +1,3 @@
-
 const TestSteps = [
     './features/step-definitions/loginSuccessfullySteps.js',
     './features/step-definitions/loginFailedEmptySteps.js',
@@ -60,7 +59,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -71,17 +70,24 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 10,
+        maxInstances: 1,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
-        excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-        'goog:chromeOptions': {
-            "excludeSwitches": ["enable-logging"]
-        }
+        // 'goog:chromeOptions': {
+        //     "excludeSwitches": ["enable-logging"],
+        //     "args": [
+        //         "--headless",
+        //         "--no-sandbox",
+        //         "--fullscreen",
+        //         "--disable-gpu",
+        //         "--disable-dev-shm-usage"
+        //     ]
+        // }
     }],
     //
     // ===================
@@ -90,7 +96,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    // logLevel: 'debug',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -153,8 +159,6 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
-
-
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
